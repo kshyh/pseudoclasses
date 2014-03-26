@@ -1,0 +1,607 @@
+/*
+ * @cssdoc            version 1.0-pre
+ * @site              
+ * @style             
+ * @revision          ???
+ * @lastmodified      rrrr-mm-dd
+*/
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+  margin:0;
+  padding:0;
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img { 
+  border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-style:normal;
+  font-weight:normal;
+}
+ol,ul {
+  list-style:none;
+}
+caption,th {
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym {
+  border:0;
+}
+a {
+  color: #9fd9e5;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffc698 !important;
+  text-decoration: underline;
+  outline: 0;
+  text-shadow: 0 0 3px;
+}
+a:active {
+  outline: 0;
+}
+a.activ {
+  color: #ffc698;
+  outline: 0;
+}
+nav {
+  text-transform: uppercase;
+}
+nav a {
+  float: none;
+  display: block;
+  width: auto;
+  margin: 0.2em 0;
+  padding: 0.35em 0.3em 0.2em;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-align: left;
+}
+input, select, textarea {
+  margin-right: 5px;
+  padding-left: 3px;
+  padding-right: 3px;
+  color: #e6ffff;
+  font-family: inherit;
+  font-size: 100%;
+  background-color: #31444f;
+  border: 1px solid #51818d;
+}
+input.text {
+  width: 70px;
+}
+input.submit {
+  color: #E6FFFF;
+  cursor: pointer;
+  background-color: #31444F;
+  background-image: -moz-linear-gradient(center top , #31444f, #1c2931);
+  border: 1px solid #51818d;
+}
+input.submit:hover {
+  background-image: -moz-linear-gradient(center top , #1c2931, #31444f);
+}
+code {
+  display: block;
+  width: 100%;
+}
+.hidden {
+  display: none; 
+}
+@font-face {
+  font-family: "sansation_light";
+  src: url("../font/sansation_light.eot");
+  src: local('peps'), url("../font/sansation_light.ttf") format("truetype"); 
+}
+@font-face {
+  font-family: "peps";
+  src: url("../font/peps_pl.eot");
+  src: local('peps'), url("../font/peps_pl.ttf") format("truetype");
+}
+
+/* ------------------------------------------------------------------------- */
+/*
+ * @section           naglowek
+ */
+/* ------------------------------------------------------------------------- */
+#header {
+  width: 100%;
+  background-color: #31444f;
+  border-bottom: 1px solid #51818d;
+}
+
+h1 {
+  padding: 20px 10px 10px 10px;
+  color: #e6ffff;
+  font-size: 3.5em;
+  letter-spacing: 0.15em;
+  font-family: peps, Arial, Helvetica, sans-serif;
+  text-shadow: 4px 0px 0px #e6ffff;
+}
+h1 a:hover {
+  text-shadow: 4px 0px 0px #e6ffff;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/*
+ * @section           kontent
+ */
+/* ------------------------------------------------------------------------- */
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #e6ffff;
+  font-family: "Luxi sans","Lucida Grande",Lucida,"Lucida Sans Unicode",sans-serif;
+  font-size: 0.8125em;
+  text-rendering: optimizelegibility;
+  background-color: #27363f;
+}
+#page {
+  min-height: 100%;
+}
+#wrapper {
+  clear: both;
+  overflow: auto;
+  margin: 20px 10px 0;
+  padding-bottom: 100px;
+  background-color: #27363f;
+}
+.tlo1, .tlo2, .tlo3, .tlo4 {
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.tlo1 {
+  background: #1c2931;
+}
+.tlo2 {
+  background: #31444f;
+}
+.tlo3 {
+  background: #3b515f;
+}
+.tlo4 {
+  background: #455f6f;
+}
+.column {
+  float: left;
+  width: 270px;
+  margin: 8px;
+}
+.column code {
+  clear: left;
+  float: left;
+  margin-top: 20px;
+}
+#wrapper .column:last-child {
+  width: 220px;
+}
+.column ul li {
+  margin-bottom: 7px;
+  cursor: pointer;
+}
+.column ul li span {
+  color: #7d8f8f;
+}
+.content {
+  float: left;
+  margin: 10px;
+}
+.pseudo .tlo3,
+.fonts .tlo3 {
+  display: none;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/*
+ * @section           stopka
+ */
+/* ------------------------------------------------------------------------- */
+#footer {
+  position: relative;
+  clear: both;
+  width: 100%;
+  height: 99px;
+  margin: -100px 0 0;
+  background-color: #1c2931;
+  border-top: 1px solid #51818d;
+}
+
+.nawigacjaDodatkowa {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.nawigacjaDodatkowa h2 {
+  padding: 10px 0;
+  color: #e6ffff;
+  letter-spacing: 1px;
+  font-size: 21px;
+  font-family: sansation_light,Arial,Helvetica,sans-serif;
+  text-shadow: 0 0 0 #e6ffff;
+}
+
+.nawigacjaDodatkowa li {
+  float: left;
+  margin: 2px 20px 0 0;
+  font-size: 11px;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/*
+ * 
+ * 
+ * @section           nth-child
+ *
+ *  
+ */
+/* ------------------------------------------------------------------------- */
+.pseudo #nth-child span,
+.pseudo #nth-child p,
+.pseudo #nth-child h2,
+.pseudo #nth-last-child span,
+.pseudo #block8 span,
+.pseudo #block8 p,
+.pseudo #block8 h2,
+.pseudo #block9 span,
+.pseudo #block9 p,
+.pseudo #block9 h2,
+.pseudo #block10 span,
+.pseudo #block10 p,
+.pseudo #block10 h2, 
+.pseudo #block11 span,
+.pseudo #block11 p,
+.pseudo #block11 h2, 
+.pseudo #block16 span,
+.pseudo #block16 p,
+.pseudo #block16 h2 {
+  display: block;
+  margin: 4px 0 4px 20px;
+  padding: 3px;
+}
+
+.content .nthChild1 :nth-child(3n+5),
+.content .nthLastChild1 span:nth-last-child(3n+5){
+  background-color: #1c2931;
+}
+
+.content .nthChild2 :nth-child(odd),
+.content .nthLastChild2 span:nth-last-child(odd) {
+  background-color: #1c2931;
+}
+
+.content .nthChild3 :nth-child(5n),
+.content .nthLastChild3 span:nth-last-child(5n) {
+  background-color: #1c2931;
+}
+
+.content .nthChild4 :nth-child(even),
+.content .nthLastChild4 span:nth-last-child(even) {
+  background-color: #1c2931;
+}
+
+.content .nthChild5 :nth-child(0n+3),
+.content .nthLastChild5 span:nth-last-child(0n+3){
+  background-color: #1c2931;
+}
+
+.content .nthChild6 :nth-child(1),
+.content .nthLastChild6 span:nth-last-child(1) {
+  background-color: #1c2931;
+}
+
+.content .nthChild7 :nth-child(-n+3),
+.content .nthLastChild7 span:nth-last-child(-n+3){
+  background-color: #1c2931;
+}
+
+/* ------------------------------------------------------------------------- */
+/*
+ * 
+ * 
+ * @section           :disabled, :enabled, :checked
+ *
+ *  
+ */
+/* ------------------------------------------------------------------------- */
+.pseudo #block3 input {
+  position: relative;
+}
+
+.pseudo #block3 input:checked {
+  padding: 5px; 
+  background: #fff;
+  color: #000;
+}
+
+.pseudo #block3 input:checked:after {
+  position: absolute;
+  top: 0;
+  left: 20px; 
+  display: block;
+  content: 'checked!';
+  color: white;
+  white-space: nowrap;
+}
+
+.pseudo #block4 input:disabled {
+  opacity: 0.2;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  filter: alpha(opacity=20);
+  -moz-transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  -o-transition: opacity 2s;
+}
+
+.pseudo #block4 input:enabled {
+  -moz-transition: opacity 2s;
+  -webkit-transition: opacity 2s;
+  -o-transition: opacity 2s;
+}
+
+.pseudo #block5,
+.pseudo #block7,
+.pseudo #block12,
+.pseudo #block13,
+.pseudo #block14,
+.pseudo #block16 {
+  width: 292px;
+}
+
+.pseudo #block5 ::selection {  
+  background-color: #000;
+}
+
+.pseudo #block5 ::-moz-selection {  
+  background-color: #000;
+  color: #000;
+}
+
+
+.pseudo #block7 span {
+  display: block;
+}
+
+.pseudo #block7 p:only-child {
+  background-color: #1c2931;
+}
+
+.pseudo #block8 span:nth-of-type(5) {
+  background-color: #1c2931;
+}
+
+.pseudo #block9 p:nth-last-of-type(2) {
+  background-color: #1c2931;
+}
+
+.pseudo #block10 p:last-of-type {
+  background-color: #1c2931;
+}
+
+.pseudo #block11 span:first-of-type {
+  background-color: #1c2931;
+}
+
+.pseudo #block12 p:only-of-type {
+  background-color: #1c2931;
+}
+
+.pseudo #block13 p:empty {
+  width:100px;
+  height:20px;
+  margin-left: 30px;
+  border: 1px dotted;
+  background-color: #1c2931;
+}
+
+.pseudo #block15 img {
+  margin: 10px 0;
+}
+
+.pseudo #block15 img { 
+  border: 2px solid #51818d;
+}
+
+.pseudo #block16 div {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.pseudo #block16 :target + div {
+  margin-top: 20px;
+  padding: 5px;
+  background: #51818d;
+  -moz-transition: ease-in all 0.5s;
+  -webkit-transition: linear all 0.5s;
+  -o-transition: linear all 2s;
+}
+
+.pseudo #block16 :target {
+  color: #ffc698;
+}
+
+/* ------------------------------------------------------------------------- */
+/*
+ * 
+ * 
+ * @section           fonts
+ *
+ *  
+ */
+/* ------------------------------------------------------------------------- */
+.fonts .tlo2 .column {
+  width: 82px;
+}
+
+.fonts .tlo3 {
+  position: relative;
+}
+
+.fonts .tlo3 .column {
+  width: 638px;
+}
+
+.fonts .tlo4 .content {
+  position: absolute;
+  right: 11px;
+  padding: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #455f6f;
+}
+.fonts .tlo4 {
+  display: none;
+}
+
+.tlo2 .column p {
+  display: inline;
+  cursor: pointer;
+}
+
+.tlo4.font1,
+.tlo4.font2 {
+  font-size: 20px;
+}
+
+.tlo4.font1.active {
+  font-family: peps, Arial, Helvetica, sans-serif;
+}
+
+.tlo4.font2.active {
+  font-family: StMarie-Thin, Georgia, serif;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/*
+ * 
+ * 
+ * @section           typography
+ *
+ *  
+ */
+/* ------------------------------------------------------------------------- */
+.typo .tlo2 .column {
+  width: 100px;
+}
+
+.typo .tlo3 .column {
+  width: 300px;
+}
+
+.typo #block1,
+.typo #block2 {
+  width: 292px;
+}
+
+.typo .tlo4 {
+  background: none;
+}
+
+.typo code {
+  padding-top: 20px;
+  border-top: 1px solid #51818d; 
+}
+
+.typo h2 {
+  position: fixed;
+  letter-spacing: 5px;
+  font-size: 60px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.typo h2.font {
+  font-size: 45px;
+  font-weight: normal;
+  font-family: peps, Arial, Helvetica, sans-serif;
+}
+
+.typo h2.tlo {
+  padding: 30px;
+  color: #fff;
+  background: #fff;
+}
+
+.typo #block2 h2 {
+  font-size: 30px;
+  font-family: peps, Arial, Helvetica, sans-serif;
+}
+
+.typo #block1 h2.stroke {
+  -webkit-text-stroke: 3px #ffc698;
+}
+
+.typo #block1 h2.fillColor {
+  -webkit-text-fill-color: #5fe2bd;
+}
+
+.typo #block1 h2.fillTransparent {
+  -webkit-text-fill-color: transparent;
+}
+
+.typo #block1 h2.shadow {
+  text-shadow: 5px 5px 5px #9fd9e5;
+}
+
+.typo #block1 h2.shadow1 {
+  text-shadow: -1px -1px 0 #000,
+                1px -1px 0 #000,
+               -1px  1px 0 #000,
+                1px  1px 0 #000;
+}
+
+.typo #block1 h2.shadow2 {
+  text-shadow: -2px -2px 0 #000,
+                2px -2px 0 #000,
+               -2px  2px 0 #000,
+                2px  2px 0 #000;
+}
+
+.typo #block1 h2.shadow3 {
+  text-shadow: -1px -1px 0 #ccc,
+                1px -1px 0 #ccc,
+               -2px  2px 0 #555,
+                2px  2px 0 #555;
+}
+
+.typo #block2 h2.below {
+  -webkit-box-reflect: below;
+}
+
+.typo #block2 h2.belowOdstep {
+  -webkit-box-reflect: below -12px;
+}
+
+.typo #block2 h2.belowGradient {
+  -webkit-box-reflect: below -12px -webkit-gradient(
+                                                      linear,
+                                                      left top, left bottom,
+                                                      from(transparent),
+                                                      color-stop(0.2, transparent),
+                                                      to(rgba(255,255,255,0.2))
+                                                    );
+}
+
+
+.typo #block2 h2.above {
+  -webkit-box-reflect: above;
+}

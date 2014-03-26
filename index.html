@@ -1,0 +1,697 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl" dir="ltr">
+  <head>
+    <title>CSS3 pseudoclasses</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="CSS3 examples" />
+    <meta name="author" content="Krzysztof Kościelniak, ksh, w3systems" />
+    <meta name="robots" content="no index, no follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS -->
+    <link type="text/css" media="screen" rel="stylesheet" href="css/style.css" />
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery-1.5.1.js"></script>
+    <!-- MOTOOLS -->
+    <script type="text/javascript" src="js/mootools-core-1.3-full-compat.js"></script>
+    
+    <script type="text/javascript" src="js/main_pseudo.js"></script>
+    
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script type="text/javascript" src="js/selectivizr.js"></script>
+      <noscript><link rel="stylesheet" href="[fallback css]" /></noscript>
+    <![endif]-->
+    
+  </head>
+  
+  <body id="home" class="pseudo">
+    <div id="page">
+    
+      <div id="header">
+        <h1><a href="http://www.w3systems.pl/blog/pseudoklasy-w-css3" title="Back to the article">CSS3 pseudoclasses</a></h1>
+      </div>
+    
+      <div id="wrapper">
+        <div class="tlo1">
+                  
+          <div class="tlo2">
+          
+            <div class="column">
+              <ul class="list">
+                <li><a href="#" id="num1" class="carrousel">:nth-child(n)</a></li>
+                <li><a href="#" id="num2" class="carrousel">:nth-last-child(n)</a></li>
+                <li><a href="#" id="num3" class="carrousel">:checked</a></li>
+                <li><a href="#" id="num4" class="carrousel">:disabled, :enabled</a></li>
+                <li><a href="#" id="num5" class="carrousel">:selection</a></li>
+                <li><a href="#" id="num7" class="carrousel">:only-child</a></li>
+                <li><a href="#" id="num8" class="carrousel">:nth-of-type(n)</a></li>
+                <li><a href="#" id="num9" class="carrousel">:nth-last-of-type(n)</a></li>
+                <li><a href="#" id="num10" class="carrousel">:last-of-type</a></li>
+                <li><a href="#" id="num11" class="carrousel">:first-of-type</a></li>
+                <li><a href="#" id="num12" class="carrousel">:only-of-type</a></li>
+                <li><a href="#" id="num13" class="carrousel">:empty</a></li>
+                <li><a href="#" id="num14" class="carrousel">:root</a></li>
+                <li><a href="#" id="num15" class="carrousel">:not(x)</a></li>
+                <li><a href="#" id="num16" class="carrousel">:target</a></li>
+              </ul>
+            </div>
+            
+            
+            <div class="tlo3">
+              <div class="column">
+              
+                <div id="item1" class="hidden">
+                  <ul>
+                    <li class="nthChild nthChild1"><span>div :nth-child(</span>3n+5<span>)</span></li>
+                    <li class="nthChild nthChild2"><span>div :nth-child(</span>odd<span>)</span></li>
+                    <li class="nthChild nthChild3"><span>div :nth-child(</span>5n<span>)</span></li>
+                    <li class="nthChild nthChild4"><span>div :nth-child(</span>even<span>)</span></li>
+                    <li class="nthChild nthChild5"><span>div :nth-child(</span>0n+3<span>)</span></li>
+                    <li class="nthChild nthChild6"><span>div :nth-child(</span>1<span>)</span></li>
+                    <li class="nthChild nthChild7"><span>div :nth-child(</span>-n+3<span>)</span></li>
+                  </ul>
+                  <div>
+                    <input type="text" value="" id="text1" class="text" />
+                    <input type="button" value="SHOW" id="test1" class="submit" />
+                    <input type="button" value="CLEAR" id="clear1" class="submit" />
+                  </div>
+                  <code>
+                    &lt;style&gt;<br />
+                    &nbsp;&nbsp;div :nth-child(3n+5) {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                    &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item2" class="hidden">
+                  <ul>
+                    <li class="nthLastChild nthLastChild1"><span>div span:nth-last-child(</span>3n+5<span>)</span></li>
+                    <li class="nthLastChild nthLastChild2"><span>div span:nth-last-child(</span>odd<span>)</span></li>
+                    <li class="nthLastChild nthLastChild3"><span>div span:nth-last-child(</span>5n<span>)</span></li>
+                    <li class="nthLastChild nthLastChild4"><span>div span:nth-last-child(</span>even<span>)</span></li>
+                    <li class="nthLastChild nthLastChild5"><span>div span:nth-last-child(</span>0n+3<span>)</span></li>
+                    <li class="nthLastChild nthLastChild6"><span>div span:nth-last-child(</span>1<span>)</span></li>
+                    <li class="nthLastChild nthLastChild7"><span>div span:nth-last-child(</span>-n+3<span>)</span></li>
+                  </ul>
+                  <div>
+                    <input type="text" value="" id="text2" class="text" />
+                    <input type="button" value="SHOW" id="test2" class="submit" />
+                    <input type="button" value="CLEAR" id="clear2" class="submit" />
+                  </div>
+                  <code>
+                    &lt;style&gt;<br />
+                    &nbsp;&nbsp;div span:nth-last-child(5) {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                    &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item3" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;input:checked::after {<br /> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;content: 'checked!';<br />
+                      &nbsp;&nbsp;}<br />
+                      &nbsp;&nbsp;input:checked {<br /> 
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: #ccc;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item4" class="hidden">
+                  <input type="checkbox" id="inpt4"><label for="inpt4">enable/disable</label>
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;input:disabled {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;opacity: 0.2;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;width: 80px;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin-right: 68px;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;-moz-transition: width 2s;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;-webkit-transition: width 2s;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;-o-transition: width 2s;<br />
+                      &nbsp;&nbsp;}<br />
+                      &nbsp;&nbsp;input:enabled {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;-moz-transition: opacity 2s;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;-webkit-transition: opacity 2s;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;-o-transition: opacity 2s;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item5" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;div ::selection {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: #ff0000;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #000;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item6" class="hidden">
+                </div>
+                
+                <div id="item7" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;div p:only-child {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item8" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;div span:nth-of-type(5) {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item9" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;div p:nth-last-of-type(2) {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item10" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;div p:last-of-type {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item11" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;div span:first-of-type {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item12" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;div p:only-of-type {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item13" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;div p:empty {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;width:100px;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;height:20px;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin-left: 30px;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 1px dotted;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background-color: #1c2931;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item14" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;:root {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;margin: 20px;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: #fff;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                </div>
+                
+                <div id="item15" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;img:not([alt]) {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;border: 2px solid yellow;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                  <input type="checkbox" id="inpt151"><label for="inpt151">enable/disable</label>
+                  <br />
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;:not(p) {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: yellow;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                  <input type="checkbox" id="inpt152"><label for="inpt152">enable/disable</label>
+                </div>
+                
+                <div id="item16" class="hidden">
+                  <code>
+                    &lt;style&gt;<br />
+                      &nbsp;&nbsp;:target + div {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;padding: 5px;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;background: #51818d;<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;transition: ease-in all 0.5s;<br />
+                      &nbsp;&nbsp;}<br />
+                      &nbsp;&nbsp;:target {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;color: #ffc698;<br />
+                      &nbsp;&nbsp;}<br />
+                    &lt;/style&gt;
+                  </code>
+                  <br />
+                  <code>
+                    &lt;ul&gt;<br />
+                    &nbsp;&nbsp;&lt;li&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#tekst1" name="powrot1"&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section 1<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />
+                    &nbsp;&nbsp;&lt;/li&gt;<br />
+                    
+                    &nbsp;&nbsp;&lt;li&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#tekst2" name="powrot2"&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Section 2<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/a&gt;<br />
+                    &nbsp;&nbsp;&lt;/li&gt;<br />
+                    &lt;/ul&gt;<br />
+                    
+                    &hellip;<br />
+                    &hellip;<br />
+                    &hellip;<br />
+                    
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;a name="tekst1"&gt;&lt;/a&gt;<br />
+                    &nbsp;&nbsp;&lt;div&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Section 1&lt;/h2&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum et dolorem&hellip;<br />
+                    &nbsp;&nbsp;&lt;/div&gt;<br />
+                    &nbsp;&nbsp;&lt;a href="#powrot1"&gt;Back&lt;/a&gt;<br />
+                    &lt;/div&gt;<br />
+                    <br />
+                    
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;a name="tekst2"&gt;&lt;/a&gt;<br />
+                    &nbsp;&nbsp;&lt;div&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;Section 2&lt;/h2&gt;<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum et dolorem&hellip;<br />
+                    &nbsp;&nbsp;&lt;/div&gt;<br />
+                    &nbsp;&nbsp;&lt;a href="#powrot2"&gt;Back&lt;/a&gt;<br />
+                    &lt;/div&gt;<br />
+                  </code>
+                </div>
+                
+              </div>
+              <div class="tlo4">
+                <div class="content">
+                
+                  <div id="block1" class="hidden">
+                    <div id="nth-child">
+                      &lt; d i v &gt;
+                      <h2>&lt;h2&gt;Lorem ipsum et dolorem&lt;/h2&gt;</h2>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      &lt; / d i v &gt;
+                    </div>
+                  </div>
+                  
+                  <div id="block2" class="hidden">
+                    <div id="nth-last-child">
+                      &lt; d i v &gt;
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      &lt; / d i v &gt;
+                    </div>
+                  </div>
+                  
+                  <div id="block3" class="hidden">
+                    <input type="checkbox">
+                  </div>
+                  
+                  <div id="block4" class="hidden">
+                    <input type="text"><br /><br />
+                  </div>
+                  
+                  <div id="block5" class="hidden">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                      laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation 
+                      ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor 
+                      in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at 
+                      vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis 
+                      dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil 
+                      imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est 
+                      usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius 
+                      quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. 
+                      Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis 
+                      per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+                    </p>
+                  </div>
+                  
+                  <div id="block6" class="hidden">
+                  </div>
+                  
+                  <div id="block7" class="hidden">
+                    <h2>&lt;h2&gt;Tytył nie zaznaczony&lt;/h2&gt;</h2><br />
+                    &lt;div&gt;<br /><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>&lt;/div&gt;<br /><br />
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;p&gt;<br />
+                    <div>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Example text, which is marked</p>
+                    </div>
+                    &nbsp;&nbsp;&lt;/p&gt;<br />
+                    &lt;/div&gt;<br /><br />
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;p&gt;<br />
+                    <div>
+                      <p>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this text is marked too
+                      </p>
+                    </div>
+                    &nbsp;&nbsp;&lt;/p&gt;<br />
+                    &lt;/div&gt;
+                  </div>
+                  
+                  <div id="block8" class="hidden">
+                    &lt;div&gt;
+                    <h2>&lt;h2&gt;Lorem ipsum et dolorem&lt;/h2&gt;</h2>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      &lt;/div&gt;
+                  </div>
+                  
+                  <div id="block9" class="hidden">
+                    &lt;div&gt;
+                    <h2>&lt;h2&gt;Lorem ipsum et dolorem&lt;/h2&gt;</h2>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      &lt;/div&gt;
+                  </div>
+                  
+                  <div id="block10" class="hidden">
+                    &lt;div&gt;
+                    <h2>&lt;h2&gt;Lorem ipsum et dolorem&lt;/h2&gt;</h2>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      &lt;/div&gt;
+                  </div>
+                  
+                  <div id="block11" class="hidden">
+                    &lt;div&gt;
+                    <h2>&lt;h2&gt;Lorem ipsum et dolorem&lt;/h2&gt;</h2>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <p>&lt;p&gt;Lorem ipsum et dolorem&lt;/p&gt;</p>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                    <span>&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                      &lt;/div&gt;
+                  </div>
+                  
+                  <div id="block12" class="hidden">
+                    <h2>&lt;h2&gt;Title not marked&lt;/h2&gt;</h2><br />
+                    &lt;div&gt;<br /><span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span><br />&lt;/div&gt;<br /><br />
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;p&gt;<br />
+                    <div>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;Example text, which is marked</p>
+                    </div>
+                    &nbsp;&nbsp;&lt;/p&gt;<br />
+                    &lt;/div&gt;<br /><br />
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;p&gt;<br />
+                    <div>
+                      <p>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Lorem ipsum et dolorem&lt;/span&gt;</span>
+                        &nbsp;&nbsp;&nbsp;&nbsp;this text is marked too <br />&nbsp;&nbsp;&nbsp;&nbsp; because is inside paragraph
+                      </p>
+                    </div>
+                    &nbsp;&nbsp;&lt;/p&gt;<br />
+                    &lt;/div&gt;
+                  </div>
+                  
+                  <div id="block13" class="hidden">
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;p&gt;<br />
+                    <div>
+                      <p></p>
+                    </div>
+                    &nbsp;&nbsp;&lt;/p&gt;<br />
+                    &lt;/div&gt;<br /><br />
+                    
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;p&gt;<br />
+                    <div>
+                      <p> </p>
+                    </div>
+                    &nbsp;&nbsp;&lt;/p&gt;<br />
+                    &lt;/div&gt;<br /><br />
+                    
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;p&gt;<br />
+                    <div>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;some text</p>
+                    </div>
+                    &nbsp;&nbsp;&lt;/p&gt;<br />
+                    &lt;/div&gt;
+                  </div>
+                  
+                  <div id="block14" class="hidden">
+                    <input type="checkbox" id="inpt14"><label for="inpt14">enable/disable</label>
+                  </div>
+                  
+                  <div id="block15" class="hidden">
+                    <img src="image/1194467_76508380.jpg" alt="Disco" /><br />
+                    <img src="image/1200081_48566788.jpg" alt="Tokio nocą" /><br />
+                    <img src="image/1357141_23945093.jpg" /><br />
+                    
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;span&gt;<br />
+                    <div>
+                      <span>&nbsp;&nbsp;&nbsp;&nbsp;text inside span</span>
+                    </div>
+                    &nbsp;&nbsp;&lt;/span&gt;<br />
+                    &lt;/div&gt;<br /><br />
+                    
+                    &lt;div&gt;<br />
+                    &nbsp;&nbsp;&lt;p&gt;<br />
+                    <div>
+                      <p>&nbsp;&nbsp;&nbsp;&nbsp;text inside paragraph</p>
+                    </div>
+                    &nbsp;&nbsp;&lt;/p&gt;<br />
+                    &lt;/div&gt;
+                    
+                  </div>
+                  
+                  <div id="block16" class="hidden">
+                    <ul>
+                      <li><a href="#tekst1" name="powrot1">Section 1</a></li>
+                      <li><a href="#tekst2" name="powrot2">Section 2</a></li>
+                      <li><a href="#tekst3" name="powrot3">Section 3</a></li>
+                      <li><a href="#tekst4" name="powrot4">Section 4</a></li>
+                      <li><a href="#tekst5" name="powrot5">Section 5</a></li>
+                    </ul>
+                    <div>
+                      <a name="tekst1"></a>
+                      <div>
+                        <h2>Section 1</h2>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ut nisi nisl, ut tempus sem. Integer mattis commodo tristique. 
+                        Suspendisse interdum lectus at nisl varius eu cursus quam convallis. Nam sit amet arcu vulputate nibh eleifend venenatis rutrum sit amet odio.
+                        Quisque blandit pretium lacinia. Nunc eros ligula, dapibus quis lobortis fermentum, venenatis non ante. Sed fermentum leo vel diam sodales vulputate. 
+                        Suspendisse venenatis auctor semper. Aliquam eget nulla purus, sed iaculis elit. Vivamus sodales fermentum arcu, sed sodales leo egestas eu. 
+                        Cras sapien erat, pulvinar sit amet sagittis et, commodo vel velit. Phasellus id mauris urna, quis tempor sapien.
+                      </div>
+                      <br />
+                      <a href="#powrot1">Back</a>
+                    </div>
+                    <div>
+                      <a name="tekst2"></a>
+                      <div>
+                        <h2>Section 2</h2>
+                        Duis rhoncus, lectus ut tincidunt fermentum, nulla nibh euismod justo, nec gravida nibh ante id neque. Nulla facilisi. In ut urna non orci dapibus blandit. 
+                        Suspendisse vitae mi arcu. Duis fringilla consequat consectetur. Integer vitae nibh sed orci tempor volutpat. Maecenas placerat, eros id gravida porttitor, 
+                        ligula massa pulvinar lacus, eget vestibulum velit urna nec massa. Nam eu ipsum eget tortor pretium adipiscing id sit amet velit. Quisque nec justo 
+                        ac dolor fringilla pellentesque a vel lectus. Proin tempor erat sed magna venenatis accumsan.
+                      </div>
+                      <br />
+                      <a href="#powrot2">Back</a>
+                    </div>
+                    <div>
+                      <a name="tekst3"></a>
+                      <div>
+                        <h2>Section 3</h2>
+                        Nulla id orci augue. Vestibulum neque nisi, semper vitae facilisis sed, varius quis ligula. Fusce non elit nec massa venenatis aliquet et dapibus ligula. 
+                        Sed et leo lorem. Nullam ut nulla nibh, in sodales enim. Nullam at cursus nulla. Donec scelerisque rutrum feugiat. Mauris eget lacus ligula. 
+                        Suspendisse gravida semper dapibus. Donec velit risus, molestie sed imperdiet sit amet, sodales et massa. Cras sed dignissim mauris. 
+                        Aenean ornare iaculis scelerisque. Aliquam consequat, ipsum vel ornare interdum, nunc dui tempor magna, eu feugiat eros magna at eros. 
+                        Nam ut lacus vel quam aliquam malesuada. Duis dictum cursus nisi id sagittis. Duis sed eros quis massa vehicula laoreet.
+                      </div>
+                      <br />
+                      <a href="#powrot3">Back</a>
+                    </div>
+                    <div>
+                      <a name="tekst4"></a>
+                      <div>
+                        <h2>Section 4</h2>
+                        Duis gravida lorem at tortor volutpat commodo. Nulla et nunc sit amet lacus interdum viverra. Suspendisse potenti. 
+                        Nullam pretium odio eu ligula sodales quis feugiat risus vulputate. Phasellus eget lorem enim, ut placerat nibh. Sed a purus a nunc fringilla rhoncus eget et purus. 
+                        Suspendisse potenti. Etiam eu diam dui, eu dictum urna. Vivamus lacinia adipiscing aliquam. Duis at ante at diam varius feugiat eu nec ipsum. Vestibulum varius, 
+                        augue ac suscipit eleifend, mi nisi bibendum odio, id tempus mi quam vel quam. Curabitur lorem odio, tincidunt sit amet vehicula eget, ullamcorper at mauris. 
+                        Aliquam euismod vestibulum sem, vitae semper massa porta at. Duis imperdiet, turpis at accumsan venenatis, tortor sapien hendrerit mauris, 
+                        quis venenatis ante lorem ac dui. In vulputate lacus non mauris consectetur imperdiet. Nulla ac purus et turpis accumsan ornare. Vivamus velit sapien, 
+                        dignissim sit amet sollicitudin eget, sagittis at metus.
+                      </div>
+                      <br />
+                      <a href="#powrot4">Back</a>
+                    </div>
+                    <div>
+                      <a name="tekst5"></a>
+                      <div>
+                        <h2>Section 5</h2>
+                        Suspendisse pellentesque condimentum pellentesque. Fusce mollis fringilla lectus, non rhoncus sem lacinia a. Sed viverra massa non sem porttitor eu ornare erat venenatis. 
+                        Maecenas felis mi, interdum et suscipit ut, tincidunt eu libero. Proin eget pulvinar ligula. Aliquam ut urna sodales dui aliquet ullamcorper scelerisque sed ante. 
+                        Praesent nec tortor nisl, non pellentesque neque. Etiam felis turpis, rhoncus eget pulvinar ut, sollicitudin vitae lorem. Ut enim metus, congue sed vulputate eu, 
+                        aliquam sit amet urna. Ut a est vel enim pulvinar varius. Aliquam elementum lectus eget erat facilisis vitae ornare sapien pretium. Sed congue eleifend dolor, 
+                        ac accumsan dolor sodales aliquet. Cras vehicula semper quam quis sollicitudin. Aenean est sem, lacinia id iaculis at, volutpat eu lorem. Sed ut faucibus arcu. 
+                        Nulla lacinia, dolor molestie dictum pharetra, mauris erat porta neque, ut egestas massa velit aliquet velit.
+                      </div>
+                      <br />
+                      <a href="#powrot5">Back</a>
+                    </div> 
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <div id="footer">
+      <div class="nawigacjaDodatkowa">
+        <h2>Nawigacja dodatkowa</h2>
+        <ul>
+          <li><a href="http://www.w3systems.pl/blog/pseudoklasy-w-css3">Powrót do artykułu</a></li>
+          <li><a href="http://www.w3systems.pl/">Strona główna</a></li>
+          <li><a href="http://www.w3systems.pl/blog/">Blog</a></li>
+          <li><a href="http://www.w3systems.pl/kontakt/">Kontakt</a></li>
+          <li><a href="http://www.w3systems.pl/spip.php?page=plan" rel="contents">Mapa strony</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </body>
+</html>
